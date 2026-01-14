@@ -1,5 +1,5 @@
 import jwt
-from flask import Flask, request, send_file
+from flask import Flask, request, send_file, render_template
 
 app = Flask(__name__)
 
@@ -40,3 +40,10 @@ def admin():
 @app.route("/public.pem")
 def pubkey():
     return send_file("public.pem")
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)
