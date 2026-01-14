@@ -1,4 +1,7 @@
 import jwt
+
+print(jwt.__version__)
+
 from flask import Flask, request, send_file, render_template
 
 app = Flask(__name__)
