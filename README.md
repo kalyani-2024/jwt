@@ -6,9 +6,13 @@ Question: Signed but Not Safe
 
 
 A company rolled out a new authentication system using JWT access tokens.
- 	They claim the tokens are securely signed and cannot be tampered with.
-During a routine pentest, you intercept the following access token from a low‑privileged user: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiZ3Vlc3QiLCJyb2xlIjoidXNlciIsImlzcyI6ImF1dGgtc2VydmljZSIsImV4cCI6MTk5OTk5OTk5OX0.XYZ_SIGNATURE
+ They claim the tokens are securely signed and cannot be tampered with.
+During a routine pentest, you intercept the following access token from a low‑privileged user: 
+
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiZ3Vlc3QiLCJyb2xlIjoidXNlciIsImlzcyI6ImF1dGgtc2VydmljZSIsImV4cCI6MTk5OTk5OTk5OX0.XYZ_SIGNATURE
+
 The backend validates the token and uses it to authorize access to    https://jwt-dun.vercel.app/ 
+
 However, the system was built in a rush. Something about the token verification logic doesn’t feel right. Gain access and retrieve the flag.
 
 Important: Do NOT commit `private.pem` or `exploit.py` to a public repo. They are ignored by `.gitignore`.
